@@ -9,7 +9,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
+    SQLiteDatabase db
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
