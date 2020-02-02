@@ -1,64 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UniversitasProfil">
+    android:orientation="vertical"
+    tools:context=".view.UniversitasProfil">
+    
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+
+    </ImageView>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/nama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="104dp"
         android:layout_marginTop="20dp"
-        android:text="TextView" />
+        android:text="nama" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/akreditas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
         android:layout_marginTop="20dp"
-        android:text="TextView" />
+        android:text="akreditas" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
         android:layout_marginTop="20dp"
-        android:text="TextView" />
+        android:text="status" />
 
     <TextView
-        android:id="@+id/TextView04"
+        android:id="@+id/jenis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignLeft="@+id/TextView02"
-        android:text="Status" />
+        android:layout_marginTop="20dp"
+        android:text="jenis" />
 
     <TextView
-        android:id="@+id/TextView02"
+        android:id="@+id/alamat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/TextView01"
-        android:text="Akreditas" />
+        android:layout_marginTop="20dp"
+        android:text="alamat" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/kota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:text="Nama" />
+        android:layout_marginTop="20dp"
+        android:text="kota" />
 
+    <TextView
+        android:id="@+id/provinsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="provinsi" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="website" />
+
+</LinearLayout>

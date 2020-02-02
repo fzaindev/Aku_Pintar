@@ -9,8 +9,6 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    SQLiteDatabase db
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,8 +28,8 @@
                     android:id="@+id/rv_univ"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/list_universitas" />
-
+                    tools:listitem="@layout/list_universitas"
+                    />
 
             </LinearLayout>
 

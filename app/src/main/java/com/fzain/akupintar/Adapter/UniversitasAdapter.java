@@ -15,14 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fzain.akupintar.Database;
 import com.fzain.akupintar.Model.UniversitasModel;
 import com.fzain.akupintar.R;
-import com.fzain.akupintar.UniversitasProfil;
+import com.fzain.akupintar.view.UniversitasProfil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 
-public class UniversitasAdapter extends RecyclerView.Adapter<UniversitasAdapter.ViewHolder> {
+public class UniversitasAdapter extends  RecyclerView.Adapter<UniversitasAdapter.ViewHolder> {
+    public static final String TAG_ID="id" ;
     private Database db;
     private Context context;
     private List<UniversitasModel> univer;
@@ -49,20 +50,33 @@ public class UniversitasAdapter extends RecyclerView.Adapter<UniversitasAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
-        final Integer[] kampus = {R.drawable.soekarno, R.drawable.meryriana, R.drawable.jokowi, R.drawable.stevejobs, R.drawable.jokowi};
+        final Integer[] kampus = {R.drawable.itb, R.drawable.ugm, R.drawable.ipb, R.drawable.its, R.drawable.ui, R.drawable.undip, R.drawable.unair, R.drawable.unhas, R.drawable.ub, R.drawable.unpad,};
         final UniversitasModel universitasModel = univer.get(i);
 
-        viewHolder.tvNama.setText(universitasModel.getNamaUniversitas());
+        viewHolder.tvNama.setText(universitasModel.getNama());
         viewHolder.tvAkreditas.setText(universitasModel.getAkreditas());
         viewHolder.tvStatus.setText(universitasModel.getStatus());
 
+        final int idd = i;
         final int idx = universitasModel.getId();
         viewHolder.ivlogo.setImageResource(kampus[idx-1]);
 
         viewHolder.cvItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                final UniversitasModel universitasModel = univer.get(idd);
+
                 Intent intent = new Intent(context, UniversitasProfil.class);
+                intent.putExtra("id",universitasModel.getId());
+                intent.putExtra("nama", universitasModel.getNama() );
+                intent.putExtra("akreditas", universitasModel.getAkreditas() );
+                intent.putExtra("status", universitasModel.getStatus() );
+                intent.putExtra("jenis", universitasModel.getJenis() );
+                intent.putExtra("alamat", universitasModel.getAlamat() );
+                intent.putExtra("kota", universitasModel.getKota() );
+                intent.putExtra("provinsi", universitasModel.getProvinsi() );
+                intent.putExtra("website", universitasModel.getWebsite() );
                 context.startActivity(intent);
             }
         });

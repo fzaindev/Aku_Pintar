@@ -1,4 +1,4 @@
-package com.fzain.akupintar;
+package com.fzain.akupintar.view;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fzain.akupintar.Adapter.SliderImageAdapter;
 import com.fzain.akupintar.Adapter.UniversitasAdapter;
+import com.fzain.akupintar.Database;
 import com.fzain.akupintar.Model.UniversitasModel;
+import com.fzain.akupintar.R;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
 import com.smarteist.autoimageslider.SliderAnimations;

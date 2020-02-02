@@ -27,7 +27,7 @@ public class SliderImageAdapter extends SliderViewAdapter<SliderImageAdapter.Sli
 
     @Override
     public SliderAdapterVH onCreateViewHolder(ViewGroup parent) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_slider_myshop, null);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.image_slider_myuniv, null);
         return new SliderAdapterVH(inflate);
 
     }
