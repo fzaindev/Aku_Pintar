@@ -53,9 +53,11 @@ public class UniversitasAdapter extends  RecyclerView.Adapter<UniversitasAdapter
         final Integer[] kampus = {R.drawable.itb, R.drawable.ugm, R.drawable.ipb, R.drawable.its, R.drawable.ui, R.drawable.undip, R.drawable.unair, R.drawable.unhas, R.drawable.ub, R.drawable.unpad,};
         final UniversitasModel universitasModel = univer.get(i);
 
+        String a = "Akreditasi ";
+        String b = "Status ";
         viewHolder.tvNama.setText(universitasModel.getNama());
-        viewHolder.tvAkreditas.setText(universitasModel.getAkreditas());
-        viewHolder.tvStatus.setText(universitasModel.getStatus());
+        viewHolder.tvAkreditas.setText(a+universitasModel.getAkreditas());
+        viewHolder.tvStatus.setText(b+universitasModel.getStatus());
 
         final int idd = i;
         final int idx = universitasModel.getId();
@@ -77,6 +79,7 @@ public class UniversitasAdapter extends  RecyclerView.Adapter<UniversitasAdapter
                 intent.putExtra("kota", universitasModel.getKota() );
                 intent.putExtra("provinsi", universitasModel.getProvinsi() );
                 intent.putExtra("website", universitasModel.getWebsite() );
+                intent.putExtra("singkat", universitasModel.getSingkat() );
                 context.startActivity(intent);
             }
         });

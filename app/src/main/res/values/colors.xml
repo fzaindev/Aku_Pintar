@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#5e35b1</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorLayerBAck">#673ab7</color>
+    <color name="colorBack">#241333</color>
+    <color name="colorTitle">#362742</color>
+    <color name="colorSubTitle">#c5c9cf</color>
+    <color name="ColorTitleWhite">#ffffff</color>
+    <color name="ColorSubTitleWhite">#b79ece</color>
+    <color name="colorView">#241333</color>
+    <color name="colorHorizontalView">#898a56ab</color>
 </resources>

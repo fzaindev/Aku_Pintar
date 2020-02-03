@@ -12,7 +12,7 @@ import com.fzain.akupintar.R;
 public class UniversitasProfil extends AppCompatActivity {
 
     ImageView id;
-    TextView nama, akreditas, status, jenis, alamat, kota, provinsi, website;
+    TextView nama, akreditas, status, jenis, alamat, kota, provinsi, website, singkat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class UniversitasProfil extends AppCompatActivity {
         kota = (TextView)findViewById(R.id.kota);
         provinsi = (TextView)findViewById(R.id.provinsi);
         website = (TextView)findViewById(R.id.website);
+        singkat = (TextView)findViewById(R.id.singkat);
 
         Intent i = getIntent();
 
@@ -39,7 +40,7 @@ public class UniversitasProfil extends AppCompatActivity {
         String g = i.getStringExtra("kota");
         String h = i.getStringExtra("provinsi");
         String ii = i.getStringExtra("website");
-
+        String j = i.getStringExtra("singkat");
 
         id.setImageResource(R.drawable.soekarno);
         nama.setText(b);
@@ -50,6 +51,7 @@ public class UniversitasProfil extends AppCompatActivity {
         kota.setText(g);
         provinsi.setText(h);
         website.setText(ii);
+        singkat.setText(j);
 
     }
 }

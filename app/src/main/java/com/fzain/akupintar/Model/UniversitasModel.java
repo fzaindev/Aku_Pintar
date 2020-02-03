@@ -10,10 +10,11 @@ public class UniversitasModel {
     private String kota;
     private String provinsi;
     private String website;
+    private String singkat;
 
 
 
-    public UniversitasModel(int universitasID, String nama, String akreditas, String status, String jenis, String alamat, String kota, String provinsi, String website) {
+    public UniversitasModel(int universitasID, String nama, String akreditas, String status, String jenis, String alamat, String kota, String provinsi, String website, String singkat) {
         this.id = universitasID;
         this.nama = nama;
         this.akreditas = akreditas;
@@ -23,6 +24,7 @@ public class UniversitasModel {
         this.kota = kota;
         this.provinsi = provinsi;
         this.website = website;
+        this.singkat = singkat;
     }
 
     public int getId() {
@@ -84,6 +86,13 @@ public class UniversitasModel {
     }
     public void setWebsite(String website) {
         this.website = website;
+    }
+
+    public String getSingkat() {
+        return singkat;
+    }
+    public void setSingkat(String singkat) {
+        this.singkat = singkat;
     }
 
 
