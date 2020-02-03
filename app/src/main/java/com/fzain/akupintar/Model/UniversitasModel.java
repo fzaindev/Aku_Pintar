@@ -1,7 +1,7 @@
 package com.fzain.akupintar.Model;
 
 public class UniversitasModel {
-    private int id;
+    private String id;
     private String nama;
     private String akreditas;
     private String status;
@@ -14,7 +14,7 @@ public class UniversitasModel {
 
 
 
-    public UniversitasModel(int universitasID, String nama, String akreditas, String status, String jenis, String alamat, String kota, String provinsi, String website, String singkat) {
+    public UniversitasModel(String universitasID, String nama, String akreditas, String status, String jenis, String alamat, String kota, String provinsi, String website, String singkat) {
         this.id = universitasID;
         this.nama = nama;
         this.akreditas = akreditas;
@@ -27,10 +27,10 @@ public class UniversitasModel {
         this.singkat = singkat;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

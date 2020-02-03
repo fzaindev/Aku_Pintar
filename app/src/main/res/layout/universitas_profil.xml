@@ -55,7 +55,7 @@
                             android:layout_height="wrap_content"
                             android:textSize="18sp"
                             android:textStyle="normal"
-                            android:textColor="@color/colorSubTitle"
+                            android:textColor="@color/colorTitle"
                             android:layout_marginBottom="50px"
                             android:layout_marginTop="5px"/>
 
@@ -175,7 +175,7 @@
                             android:id="@+id/alamat"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/ColorTitleWhite"
+                            android:textColor="@color/colorTitle"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             android:text="Jalan"/>
@@ -188,7 +188,7 @@
                                 android:id="@+id/kota"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/ColorTitleWhite"
+                                android:textColor="@color/colorTitle"
                                 android:textSize="18sp"
                                 android:textStyle="normal"
                                 android:text="Kota"
@@ -197,7 +197,7 @@
                                 android:id="@+id/provinsi"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/ColorTitleWhite"
+                                android:textColor="@color/colorTitle"
                                 android:textSize="18sp"
                                 android:textStyle="normal"
                                 android:text="Provinsi"/>
@@ -222,10 +222,20 @@
                             android:id="@+id/website"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/ColorTitleWhite"
+                            android:textColor="@color/colorTitle"
                             android:textSize="20sp"
                             android:textStyle="bold"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
                             android:text="Website"/>
+
+                        <Button
+                            android:id="@+id/maps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="lihat di maps"
+                            >
+
+                        </Button>
 
                     </LinearLayout>
 

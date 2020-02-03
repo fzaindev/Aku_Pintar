@@ -39,7 +39,7 @@ public class Database extends SQLiteOpenHelper {
 
     public void tes (SQLiteDatabase db){
         String query = "CREATE TABLE " + T_UNIVERSITAS + " (" +
-                ID + " INTEGER PRIMARY KEY, " +
+                ID + " TEXT PRIMARY KEY, " +
                 NAMA + " TEXT, " +
                 AKREDITASI + " TEXT, " +
                 STATUS + " TEXT, " +
@@ -52,25 +52,25 @@ public class Database extends SQLiteOpenHelper {
         Log.d("Data", "onCreate: " + query);
         db.execSQL(query);
 
-        query = "insert into tb_universitas values(1,'Institut Teknologi Bandung','A','PTN-BH','NEGERI','Jl. Ganesha no 10 Siliwangi','Kota Bandung','Provinsi Jawa Barat','itb.ac.id','(ITB)')";
+        query = "insert into tb_universitas values('1','Institut Teknologi Bandung','A','PTN-BH','NEGERI','Jl. Ganesha no 10 Siliwangi','Kota Bandung','Provinsi Jawa Barat','itb.ac.id','(ITB)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(2,'Universitas Gadjah Mada','A','PTN-BH','NEGERI','Jl. Bulaksumur','Kota Sleman','Provinsi D I Yogyakarta','ugm.ac.id','(UGM)')";
+        query = "insert into tb_universitas values('2','Universitas Gadjah Mada','A','PTN-BH','NEGERI','Jl. Bulaksumur','Kota Sleman','Provinsi D I Yogyakarta','https://ugm.ac.id','(UGM)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(3,'Institut Pertanian Bogor','A','PTN-BH','NEGERI','Jl. Pajajaran','Kota Bogor','Provinsi Jawa Barat','ipb.ac.id','(IPB)')";
+        query = "insert into tb_universitas values('3','Institut Pertanian Bogor','A','PTN-BH','NEGERI','Jl. Pajajaran','Kota Bogor','Provinsi Jawa Barat','https://ipb.ac.id','(IPB)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(4,'Institut Teknologi Sepuluh November','A','PTN-BH','NEGERI','Jl. Raya Keputih','Kota Surabaya','Provinsi Jawa Timur','its.ac.id','(ITS)')";
+        query = "insert into tb_universitas values('4','Institut Teknologi Sepuluh November','A','PTN-BH','NEGERI','Jl. Raya Keputih','Kota Surabaya','Provinsi Jawa Timur','https://its.ac.id','(ITS)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(5,'Universitas Indonesia','A','PTN-BH','NEGERI','Jl. Margonda Raya','Kota Depok','Provinsi Jawa Barat','ui.ac.id','(UI)')";
+        query = "insert into tb_universitas values('5','Universitas Indonesia','A','PTN-BH','NEGERI','Jl. Margonda Raya','Kota Depok','Provinsi Jawa Barat','https://ui.ac.id','(UI)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(6,'Universitas Diponegoro','A','PTN-BH','NEGERI','Jl. Prof. Soedarto SH','Kota Semarang','Provinsi Jawa Tengah','undip.ac.id','(Undip)')";
+        query = "insert into tb_universitas values('6','Universitas Diponegoro','A','PTN-BH','NEGERI','Jl. Prof. Soedarto SH','Kota Semarang','Provinsi Jawa Tengah','https://undip.ac.id','(Undip)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(7,'Universitas Airlangga','A','PTN-BH','NEGERI','Jl. Airlangga No 4-6','Kota Surabaya','Provinsi Jawa Timur','unair.ac.id','(Unair)')";
+        query = "insert into tb_universitas values('7','Universitas Airlangga','A','PTN-BH','NEGERI','Jl. Airlangga No 4-6','Kota Surabaya','Provinsi Jawa Timur','https://unair.ac.id','(Unair)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(8,'Universitas Hasanuddin','A','PTN-BH','NEGERI','Jl. Perintis Kemerdekaan','Kota Makasar','Provinsi Sulawesi Selatan','unhas.ac.id','(Unhas)')";
+        query = "insert into tb_universitas values('8','Universitas Hasanuddin','A','PTN-BH','NEGERI','Jl. Perintis Kemerdekaan','Kota Makasar','Provinsi Sulawesi Selatan','https://unhas.ac.id','(Unhas)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(9,'Universitas Brawijaya','A','PTN-BLU','NEGERI','Jl. Veteran','Kota Malang','Provinsi Jawa Timur','ub.ac.id','(UB)')";
+        query = "insert into tb_universitas values('9','Universitas Brawijaya','A','PTN-BLU','NEGERI','Jl. Veteran','Kota Malang','Provinsi Jawa Timur','https://ub.ac.id','(UB)')";
         db.execSQL(query);
-        query = "insert into tb_universitas values(10,'Universitas Padjajaran','A','PTN-BH','NEGERI','Jl. Raya Bandung','Kota Sumedang','Provinsi Jawa Barat','unpat.ac.id','(Unpad)')";
+        query = "insert into tb_universitas values('10','Universitas Padjajaran','A','PTN-BH','NEGERI','Jl. Raya Bandung','Kota Sumedang','Provinsi Jawa Barat','https://unpat.ac.id','(Unpad)')";
         db.execSQL(query);
     }
 
@@ -94,7 +94,7 @@ public class Database extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
-                int id = cursor.getInt(0);
+                String id = cursor.getString(0);
                 String nama = cursor.getString(1);
                 String akreditas = cursor.getString(2);
                 String status = cursor.getString(3);

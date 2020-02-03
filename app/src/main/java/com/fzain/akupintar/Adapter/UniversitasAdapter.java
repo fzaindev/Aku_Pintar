@@ -60,8 +60,9 @@ public class UniversitasAdapter extends  RecyclerView.Adapter<UniversitasAdapter
         viewHolder.tvStatus.setText(b+universitasModel.getStatus());
 
         final int idd = i;
-        final int idx = universitasModel.getId();
-        viewHolder.ivlogo.setImageResource(kampus[idx-1]);
+        final String idx = universitasModel.getId();
+        int dd = Integer.parseInt(idx);
+        viewHolder.ivlogo.setImageResource(kampus[dd-1]);
 
         viewHolder.cvItem.setOnClickListener(new View.OnClickListener() {
             @Override
